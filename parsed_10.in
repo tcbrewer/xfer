@@ -360,8 +360,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -604,8 +603,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -848,8 +846,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -1092,8 +1089,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -1336,8 +1332,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -1580,8 +1575,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -1824,8 +1818,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -2068,8 +2061,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -2312,8 +2304,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
@@ -2556,8 +2547,7 @@ fpu_post_norm_mul.s_opb_i==bx
 fpu_post_norm_mul.s_r_zeros==bx
 fpu_post_norm_mul.s_rmode_i==bx
 fpu_post_norm_mul.s_shl2==bx
-fpu_post_norm_mul.s_shr2==
-
+fpu_post_norm_mul.s_shr2==bx
 fpu_post_norm_mul.s_sign_i==x
 fpu_post_norm_mul.s_zeros==b0
 fpu_pre_norm_div.exp_10_o==bx
