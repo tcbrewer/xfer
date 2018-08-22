@@ -1,5 +1,5 @@
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -11,21 +11,21 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==0
+Z carry==x
+Z clk==0
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
-B cy_we_rf==0
-B cyforw==0
-B dc_en==x
-B dc_no_writethrough==0
-B dcpu_ack_i==x
+Z cy_we_alu==0
+Z cy_we_rf==0
+Z cyforw==0
+Z dc_en==x
+Z dc_no_writethrough==0
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -34,7 +34,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -51,14 +51,14 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 N dcpu_tag_i[3:0]==xxxx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -102,8 +102,8 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xxxx
 N du_except_trig[11:8]==xxxx
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt==0
+Z du_hwbkpt_ls_r==0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
 N du_lsu_load_dat[11:8]==xxxx
@@ -120,9 +120,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -131,7 +131,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -140,13 +140,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -155,9 +155,9 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_branch_taken==0
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -166,7 +166,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -183,20 +183,20 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==x
-B except_dtlbmiss==x
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==x
+Z except_dtlbmiss==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==xxxx
 N except_stop[11:8]==xxxx
@@ -206,19 +206,19 @@ N except_trig[7:4]==xxxx
 N except_trig[11:8]==xxxx
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -227,14 +227,14 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==x
-B ic_en==x
-B icpu_ack_i==x
+Z genpc_freeze==x
+Z genpc_refetch==x
+Z ic_en==x
+Z icpu_ack_i==x
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
 N icpu_adr_i[11:8]==xxxx
@@ -251,7 +251,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -260,8 +260,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 N icpu_tag_i[3:0]==xxxx
 N icpu_tag_o[3:0]==0001
@@ -273,8 +273,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -285,7 +285,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -302,9 +302,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -321,8 +321,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -331,11 +331,11 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
-B mtspr_done==1
+Z mtspr_dc_done==1
+Z mtspr_done==1
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
 N mult_mac_result[11:8]==xxxx
@@ -344,7 +344,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -362,7 +362,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -379,11 +379,11 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
-B ov_we_mult_mac==0
-B ovforw==0
-B ovforw_mult_mac==0
-B pc_we==x
+Z ov_we_alu==0
+Z ov_we_mult_mac==0
+Z ovforw==0
+Z ovforw_mult_mac==0
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -415,21 +415,21 @@ NFrf_dataw[19:16]==0000
 NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==x
-B saving_if_insn==x
-B sb_en==0
+Z rst==x
+Z saving_if_insn==x
+Z sb_en==0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==x
-B sig_trap==x
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -550,7 +550,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -564,15 +564,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -581,7 +581,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -598,7 +598,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -1576,8 +1576,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -1589,27 +1589,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==1
+Z carry==x
+Z clk==1
 L clk~~1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -1618,7 +1618,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -1635,15 +1635,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -1687,9 +1687,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -1707,9 +1707,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -1718,7 +1718,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -1727,13 +1727,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -1742,10 +1742,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -1754,7 +1754,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -1771,20 +1771,20 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
-B except_dtlbmiss==0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
+Z except_dtlbmiss==0
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -1794,22 +1794,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -1818,14 +1818,14 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
-B ic_en==x
-B icpu_ack_i==0
+Z genpc_freeze==x
+Z genpc_refetch==0
+Z ic_en==x
+Z icpu_ack_i==0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
 N icpu_adr_i[11:8]==xxxx
@@ -1842,7 +1842,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -1851,8 +1851,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -1866,8 +1866,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -1878,7 +1878,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -1895,9 +1895,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -1914,8 +1914,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -1924,12 +1924,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -1939,7 +1939,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -1957,7 +1957,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -1974,15 +1974,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -2015,22 +2015,22 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
-B saving_if_insn==x
-B sb_en==0
+Z rst==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
-B sig_trap==x
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -2155,7 +2155,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -2170,15 +2170,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -2187,7 +2187,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -2204,7 +2204,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -3168,8 +3168,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -3181,27 +3181,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==0
+Z carry==x
+Z clk==0
 L clk~~-1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -3210,7 +3210,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -3227,15 +3227,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -3279,9 +3279,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -3299,9 +3299,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -3310,7 +3310,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -3319,13 +3319,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -3334,10 +3334,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -3346,7 +3346,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -3363,22 +3363,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -3388,22 +3388,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -3412,15 +3412,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -3438,7 +3438,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -3447,8 +3447,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -3462,8 +3462,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -3474,7 +3474,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -3491,9 +3491,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -3510,8 +3510,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -3520,12 +3520,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -3535,7 +3535,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -3553,7 +3553,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -3570,15 +3570,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -3611,24 +3611,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -3753,7 +3753,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -3768,15 +3768,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -3785,7 +3785,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -3802,7 +3802,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -4766,8 +4766,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -4779,27 +4779,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==1
+Z carry==x
+Z clk==1
 L clk~~1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -4808,7 +4808,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -4825,15 +4825,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -4877,9 +4877,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -4897,9 +4897,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -4908,7 +4908,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -4917,13 +4917,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -4932,10 +4932,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -4944,7 +4944,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -4961,22 +4961,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -4986,22 +4986,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -5010,15 +5010,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -5036,7 +5036,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -5045,8 +5045,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -5060,8 +5060,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -5072,7 +5072,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -5089,9 +5089,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -5108,8 +5108,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -5118,12 +5118,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -5133,7 +5133,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -5151,7 +5151,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -5168,15 +5168,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -5209,24 +5209,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -5351,7 +5351,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -5366,15 +5366,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -5383,7 +5383,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -5400,7 +5400,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -6364,8 +6364,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -6377,27 +6377,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==0
+Z carry==x
+Z clk==0
 L clk~~-1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -6406,7 +6406,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -6423,15 +6423,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -6475,9 +6475,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -6495,9 +6495,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -6506,7 +6506,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -6515,13 +6515,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -6530,10 +6530,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -6542,7 +6542,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -6559,22 +6559,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -6584,22 +6584,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -6608,15 +6608,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -6634,7 +6634,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -6643,8 +6643,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -6658,8 +6658,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -6670,7 +6670,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -6687,9 +6687,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -6706,8 +6706,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -6716,12 +6716,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -6731,7 +6731,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -6749,7 +6749,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -6766,15 +6766,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -6807,24 +6807,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -6949,7 +6949,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -6964,15 +6964,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -6981,7 +6981,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -6998,7 +6998,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -7962,8 +7962,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -7975,27 +7975,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==1
+Z carry==x
+Z clk==1
 L clk~~1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -8004,7 +8004,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -8021,15 +8021,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -8073,9 +8073,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -8093,9 +8093,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -8104,7 +8104,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -8113,13 +8113,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -8128,10 +8128,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -8140,7 +8140,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -8157,22 +8157,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -8182,22 +8182,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -8206,15 +8206,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -8232,7 +8232,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -8241,8 +8241,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -8256,8 +8256,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -8268,7 +8268,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -8285,9 +8285,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -8304,8 +8304,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -8314,12 +8314,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -8329,7 +8329,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -8347,7 +8347,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -8364,15 +8364,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -8405,24 +8405,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -8547,7 +8547,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -8562,15 +8562,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -8579,7 +8579,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -8596,7 +8596,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -9560,8 +9560,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -9573,27 +9573,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==0
+Z carry==x
+Z clk==0
 L clk~~-1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -9602,7 +9602,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -9619,15 +9619,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -9671,9 +9671,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -9691,9 +9691,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -9702,7 +9702,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -9711,13 +9711,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -9726,10 +9726,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -9738,7 +9738,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -9755,22 +9755,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -9780,22 +9780,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -9804,15 +9804,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -9830,7 +9830,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -9839,8 +9839,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -9854,8 +9854,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -9866,7 +9866,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -9883,9 +9883,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -9902,8 +9902,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -9912,12 +9912,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -9927,7 +9927,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -9945,7 +9945,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -9962,15 +9962,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -10003,24 +10003,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -10145,7 +10145,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -10160,15 +10160,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -10177,7 +10177,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -10194,7 +10194,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -11158,8 +11158,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -11171,27 +11171,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==1
+Z carry==x
+Z clk==1
 L clk~~1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -11200,7 +11200,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -11217,15 +11217,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -11269,9 +11269,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -11289,9 +11289,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -11300,7 +11300,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -11309,13 +11309,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -11324,10 +11324,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -11336,7 +11336,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -11353,22 +11353,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -11378,22 +11378,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -11402,15 +11402,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -11428,7 +11428,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -11437,8 +11437,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -11452,8 +11452,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -11464,7 +11464,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -11481,9 +11481,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -11500,8 +11500,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -11510,12 +11510,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -11525,7 +11525,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -11543,7 +11543,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -11560,15 +11560,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -11601,24 +11601,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -11743,7 +11743,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -11758,15 +11758,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -11775,7 +11775,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -11792,7 +11792,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -12756,8 +12756,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -12769,27 +12769,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==0
+Z carry==x
+Z clk==0
 L clk~~-1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -12798,7 +12798,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -12815,15 +12815,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -12867,9 +12867,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -12887,9 +12887,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -12898,7 +12898,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -12907,13 +12907,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -12922,10 +12922,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -12934,7 +12934,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -12951,22 +12951,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -12976,22 +12976,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -13000,15 +13000,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -13026,7 +13026,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -13035,8 +13035,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -13050,8 +13050,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -13062,7 +13062,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -13079,9 +13079,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -13098,8 +13098,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -13108,12 +13108,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -13123,7 +13123,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -13141,7 +13141,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -13158,15 +13158,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -13199,24 +13199,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -13341,7 +13341,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -13356,15 +13356,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -13373,7 +13373,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -13390,7 +13390,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -14354,8 +14354,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -14367,27 +14367,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==1
+Z carry==x
+Z clk==1
 L clk~~1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -14396,7 +14396,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -14413,15 +14413,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -14465,9 +14465,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -14485,9 +14485,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -14496,7 +14496,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -14505,13 +14505,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -14520,10 +14520,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -14532,7 +14532,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -14549,22 +14549,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -14574,22 +14574,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -14598,15 +14598,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -14624,7 +14624,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -14633,8 +14633,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -14648,8 +14648,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -14660,7 +14660,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -14677,9 +14677,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -14696,8 +14696,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -14706,12 +14706,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -14721,7 +14721,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -14739,7 +14739,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -14756,15 +14756,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -14797,24 +14797,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -14939,7 +14939,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -14954,15 +14954,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -14971,7 +14971,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -14988,7 +14988,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
@@ -15952,8 +15952,8 @@ T sel_a==sel_b
 T sel_a==wait_on
 T sel_b==wait_on
 ..
-B abort_ex==x
-B abort_mvspr==x
+Z abort_ex==x
+Z abort_mvspr==x
 N alu_dataout[3:0]==xxxx
 N alu_dataout[7:4]==xxxx
 N alu_dataout[11:8]==xxxx
@@ -15965,27 +15965,27 @@ N alu_dataout[31:28]==xxxx
 N alu_op[3:0]==xxxx
 N alu_op[4:4]==x
 N alu_op2[3:0]==xxxx
-B boot_adr_sel_i==0
+Z boot_adr_sel_i==0
 L boot_adr_sel_i~~0
 N branch_op[2:0]==xxx
-B carry==x
-B clk==0
+Z carry==x
+Z clk==0
 L clk~~-1
 N comp_op[3:0]==xxxx
 N cust5_limm[3:0]==xxxx
 N cust5_limm[5:4]==xx
 N cust5_op[3:0]==xxxx
 N cust5_op[4:4]==x
-B cy_we_alu==0
+Z cy_we_alu==0
 L cy_we_alu~~0
-B cy_we_rf==0
+Z cy_we_rf==0
 L cy_we_rf~~0
-B cyforw==0
+Z cyforw==0
 L cyforw~~0
-B dc_en==x
-B dc_no_writethrough==0
+Z dc_en==x
+Z dc_no_writethrough==0
 L dc_no_writethrough~~0
-B dcpu_ack_i==x
+Z dcpu_ack_i==x
 NFdcpu_adr_o[3:0]==xxxx
 NFdcpu_adr_o[7:4]==xxxx
 NFdcpu_adr_o[11:8]==xxxx
@@ -15994,7 +15994,7 @@ NFdcpu_adr_o[19:16]==xxxx
 NFdcpu_adr_o[23:20]==xxxx
 NFdcpu_adr_o[27:24]==xxxx
 NFdcpu_adr_o[31:28]==xxxx
-B dcpu_cycstb_o==x
+Z dcpu_cycstb_o==x
 NFdcpu_dat_i[3:0]==xxxx
 NFdcpu_dat_i[7:4]==xxxx
 NFdcpu_dat_i[11:8]==xxxx
@@ -16011,15 +16011,15 @@ NFdcpu_dat_o[19:16]==xxxx
 NFdcpu_dat_o[23:20]==xxxx
 NFdcpu_dat_o[27:24]==xxxx
 NFdcpu_dat_o[31:28]==xxxx
-B dcpu_err_i==x
-B dcpu_rty_i==x
+Z dcpu_err_i==x
+Z dcpu_rty_i==x
 N dcpu_sel_o[3:0]==0000
 L dcpu_sel_o~~0
 N dcpu_tag_i[3:0]==x0xx
 N dcpu_tag_o[3:0]==xx0x
-B dcpu_we_o==x
-B dmmu_en==x
-B dsx==x
+Z dcpu_we_o==x
+Z dmmu_en==x
+Z dsx==x
 N du_addr[3:0]==xxxx
 N du_addr[7:4]==xxxx
 N du_addr[11:8]==xxxx
@@ -16063,9 +16063,9 @@ N du_except_trig[3:0]==xxxx
 N du_except_trig[7:4]==xx0x
 N du_except_trig[11:8]==xxx0
 N du_except_trig[13:12]==xx
-B du_hwbkpt==0
+Z du_hwbkpt==0
 L du_hwbkpt~~0
-B du_hwbkpt_ls_r==0
+Z du_hwbkpt_ls_r==0
 L du_hwbkpt_ls_r~~0
 N du_lsu_load_dat[3:0]==xxxx
 N du_lsu_load_dat[7:4]==xxxx
@@ -16083,9 +16083,9 @@ N du_lsu_store_dat[19:16]==xxxx
 N du_lsu_store_dat[23:20]==xxxx
 N du_lsu_store_dat[27:24]==xxxx
 N du_lsu_store_dat[31:28]==xxxx
-B du_read==x
-B du_stall==x
-B du_write==x
+Z du_read==x
+Z du_stall==x
+Z du_write==x
 NFeear[3:0]==xxxx
 NFeear[7:4]==xxxx
 NFeear[11:8]==xxxx
@@ -16094,7 +16094,7 @@ NFeear[19:16]==xxxx
 NFeear[23:20]==xxxx
 NFeear[27:24]==xxxx
 NFeear[31:28]==xxxx
-B eear_we==x
+Z eear_we==x
 NFepcr[3:0]==xxxx
 NFepcr[7:4]==xxxx
 NFepcr[11:8]==xxxx
@@ -16103,13 +16103,13 @@ NFepcr[19:16]==xxxx
 NFepcr[23:20]==xxxx
 NFepcr[27:24]==xxxx
 NFepcr[31:28]==xxxx
-B epcr_we==x
+Z epcr_we==x
 NFesr[3:0]==xxxx
 NFesr[7:4]==xxxx
 NFesr[11:8]==xxxx
 NFesr[15:12]==xxxx
 NFesr[16:16]==x
-B esr_we==x
+Z esr_we==x
 N ex_branch_addrtarget[3:0]==xxxx
 N ex_branch_addrtarget[7:4]==xxxx
 N ex_branch_addrtarget[11:8]==xxxx
@@ -16118,10 +16118,10 @@ N ex_branch_addrtarget[19:16]==xxxx
 N ex_branch_addrtarget[23:20]==xxxx
 N ex_branch_addrtarget[27:24]==xxxx
 N ex_branch_addrtarget[29:28]==xx
-B ex_branch_taken==0
+Z ex_branch_taken==0
 L ex_branch_taken~~0
-B ex_flushpipe==x
-B ex_freeze==x
+Z ex_flushpipe==x
+Z ex_freeze==x
 NFex_insn[3:0]==xxxx
 NFex_insn[7:4]==xxxx
 NFex_insn[11:8]==xxxx
@@ -16130,7 +16130,7 @@ NFex_insn[19:16]==xxxx
 NFex_insn[23:20]==xxxx
 NFex_insn[27:24]==xxxx
 NFex_insn[31:28]==xxxx
-B ex_macrc_op==x
+Z ex_macrc_op==x
 N ex_pc[3:0]==xxxx
 N ex_pc[7:4]==xxxx
 N ex_pc[11:8]==xxxx
@@ -16147,22 +16147,22 @@ N ex_simm[19:16]==xxxx
 N ex_simm[23:20]==xxxx
 N ex_simm[27:24]==xxxx
 N ex_simm[31:28]==xxxx
-B ex_spr_read==x
-B ex_spr_write==x
-B ex_void==x
-B except_align==x
-B except_dbuserr==x
-B except_dmmufault==0
+Z ex_spr_read==x
+Z ex_spr_write==x
+Z ex_void==x
+Z except_align==x
+Z except_dbuserr==x
+Z except_dmmufault==0
 L except_dmmufault~~0
-B except_dtlbmiss==0
+Z except_dtlbmiss==0
 L except_dtlbmiss~~0
-B except_flushpipe==x
-B except_ibuserr==x
-B except_illegal==x
-B except_immufault==x
-B except_itlbmiss==x
-B except_start==x
-B except_started==x
+Z except_flushpipe==x
+Z except_ibuserr==x
+Z except_illegal==x
+Z except_immufault==x
+Z except_itlbmiss==x
+Z except_start==x
+Z except_started==x
 N except_stop[3:0]==xxxx
 N except_stop[7:4]==x00x
 N except_stop[11:8]==xxxx
@@ -16172,22 +16172,22 @@ N except_trig[7:4]==xx0x
 N except_trig[11:8]==xxx0
 N except_trig[13:12]==xx
 N except_type[3:0]==xxxx
-B extend_flush==x
-B flag==x
-B flag_we==x
-B flag_we_alu==0
+Z extend_flush==x
+Z flag==x
+Z flag_we==x
+Z flag_we_alu==0
 L flag_we_alu~~0
-B flag_we_fpu==x
-B flagforw==x
-B flagforw_alu==0
+Z flag_we_fpu==x
+Z flagforw==x
+Z flagforw_alu==0
 L flagforw_alu~~0
-B flagforw_fpu==x
-B force_dslot_fetch==0
+Z flagforw_fpu==x
+Z force_dslot_fetch==0
 L force_dslot_fetch~~0
 N fpcsr[3:0]==xxxx
 N fpcsr[7:4]==xxxx
 N fpcsr[11:8]==xxxx
-B fpcsr_we==x
+Z fpcsr_we==x
 N fpu_dataout[3:0]==xxxx
 N fpu_dataout[7:4]==xxxx
 N fpu_dataout[11:8]==xxxx
@@ -16196,15 +16196,15 @@ N fpu_dataout[19:16]==xxxx
 N fpu_dataout[23:20]==xxxx
 N fpu_dataout[27:24]==xxxx
 N fpu_dataout[31:28]==xxxx
-B fpu_done==x
-B fpu_except_started==x
+Z fpu_done==x
+Z fpu_except_started==x
 N fpu_op[3:0]==xxxx
 N fpu_op[7:4]==xxxx
-B genpc_freeze==x
-B genpc_refetch==0
+Z genpc_freeze==x
+Z genpc_refetch==0
 L genpc_refetch~~0
-B ic_en==x
-B icpu_ack_i==0
+Z ic_en==x
+Z icpu_ack_i==0
 L icpu_ack_i~~0
 N icpu_adr_i[3:0]==xxxx
 N icpu_adr_i[7:4]==xxxx
@@ -16222,7 +16222,7 @@ N icpu_adr_o[19:16]==xxxx
 N icpu_adr_o[23:20]==xxxx
 N icpu_adr_o[27:24]==xxxx
 N icpu_adr_o[31:28]==xxxx
-B icpu_cycstb_o==x
+Z icpu_cycstb_o==x
 N icpu_dat_i[3:0]==xxxx
 N icpu_dat_i[7:4]==xxxx
 N icpu_dat_i[11:8]==xxxx
@@ -16231,8 +16231,8 @@ N icpu_dat_i[19:16]==xxxx
 N icpu_dat_i[23:20]==xxxx
 N icpu_dat_i[27:24]==xxxx
 N icpu_dat_i[31:28]==xxxx
-B icpu_err_i==x
-B icpu_rty_i==x
+Z icpu_err_i==x
+Z icpu_rty_i==x
 N icpu_sel_o[3:0]==1111
 L icpu_sel_o~~0
 N icpu_tag_i[3:0]==xxxx
@@ -16246,8 +16246,8 @@ N id_branch_addrtarget[19:16]==xxxx
 N id_branch_addrtarget[23:20]==xxxx
 N id_branch_addrtarget[27:24]==xxxx
 N id_branch_addrtarget[29:28]==xx
-BFid_flushpipe==x
-BFid_freeze==x
+ZFid_flushpipe==x
+ZFid_freeze==x
 N id_insn[3:0]==xxxx
 N id_insn[7:4]==xxxx
 N id_insn[11:8]==xxxx
@@ -16258,7 +16258,7 @@ N id_insn[27:24]==xxxx
 N id_insn[31:28]==xxxx
 N id_lsu_op[3:0]==xxxx
 N id_mac_op[2:0]==xxx
-B id_macrc_op==x
+Z id_macrc_op==x
 NFid_pc[3:0]==xxxx
 NFid_pc[7:4]==xxxx
 NFid_pc[11:8]==xxxx
@@ -16275,9 +16275,9 @@ N id_simm[19:16]==xxxx
 N id_simm[23:20]==xxxx
 N id_simm[27:24]==xxxx
 N id_simm[31:28]==xxxx
-B id_void==x
-B if_flushpipe==x
-B if_freeze==x
+Z id_void==x
+Z if_flushpipe==x
+Z if_freeze==x
 N if_insn[3:0]==xxxx
 N if_insn[7:4]==xxxx
 N if_insn[11:8]==xxxx
@@ -16294,8 +16294,8 @@ N if_pc[19:16]==xxxx
 N if_pc[23:20]==xxxx
 N if_pc[27:24]==xxxx
 N if_pc[31:28]==xxxx
-B if_stall==x
-B immu_en==x
+Z if_stall==x
+Z immu_en==x
 N lsu_dataout[3:0]==xxxx
 N lsu_dataout[7:4]==xxxx
 N lsu_dataout[11:8]==xxxx
@@ -16304,12 +16304,12 @@ N lsu_dataout[19:16]==xxxx
 N lsu_dataout[23:20]==xxxx
 N lsu_dataout[27:24]==xxxx
 N lsu_dataout[31:28]==xxxx
-B lsu_stall==x
-B lsu_unstall==x
+Z lsu_stall==x
+Z lsu_unstall==x
 N mac_op[2:0]==xxx
-B mtspr_dc_done==1
+Z mtspr_dc_done==1
 L mtspr_dc_done~~0
-B mtspr_done==1
+Z mtspr_done==1
 L mtspr_done~~0
 N mult_mac_result[3:0]==xxxx
 N mult_mac_result[7:4]==xxxx
@@ -16319,7 +16319,7 @@ N mult_mac_result[19:16]==xxxx
 N mult_mac_result[23:20]==xxxx
 N mult_mac_result[27:24]==xxxx
 N mult_mac_result[31:28]==xxxx
-B mult_mac_stall==x
+Z mult_mac_stall==x
 N multicycle[2:0]==xxx
 N muxed_a[3:0]==xxxx
 N muxed_a[7:4]==xxxx
@@ -16337,7 +16337,7 @@ N muxed_b[19:16]==xxxx
 N muxed_b[23:20]==xxxx
 N muxed_b[27:24]==xxxx
 N muxed_b[31:28]==xxxx
-B no_more_dslot==x
+Z no_more_dslot==x
 NFoperand_a[3:0]==xxxx
 NFoperand_a[7:4]==xxxx
 NFoperand_a[11:8]==xxxx
@@ -16354,15 +16354,15 @@ NFoperand_b[19:16]==xxxx
 NFoperand_b[23:20]==xxxx
 NFoperand_b[27:24]==xxxx
 NFoperand_b[31:28]==xxxx
-B ov_we_alu==0
+Z ov_we_alu==0
 L ov_we_alu~~0
-B ov_we_mult_mac==0
+Z ov_we_mult_mac==0
 L ov_we_mult_mac~~0
-B ovforw==0
+Z ovforw==0
 L ovforw~~0
-B ovforw_mult_mac==0
+Z ovforw_mult_mac==0
 L ovforw_mult_mac~~0
-B pc_we==x
+Z pc_we==x
 N pre_branch_op[2:0]==xxx
 N rf_addra[3:0]==xxxx
 N rf_addra[4:4]==x
@@ -16395,24 +16395,24 @@ NFrf_dataw[23:20]==0000
 NFrf_dataw[27:24]==0000
 NFrf_dataw[31:28]==0000
 L rf_dataw~~0
-B rf_rda==x
-B rf_rdb==x
-B rfe==x
+Z rf_rda==x
+Z rf_rdb==x
+Z rfe==x
 N rfwb_op[3:0]==xxxx
-B rst==0
+Z rst==0
 L rst~~0
-B saving_if_insn==x
-B sb_en==0
+Z saving_if_insn==x
+Z sb_en==0
 L sb_en~~0
 N sel_a[1:0]==xx
 N sel_b[1:0]==xx
-B sig_fp==x
-B sig_int==x
-B sig_range==x
-B sig_syscall==x
-B sig_tick==0
+Z sig_fp==x
+Z sig_int==x
+Z sig_range==x
+Z sig_syscall==x
+Z sig_tick==0
 L sig_tick~~0
-B sig_trap==x
+Z sig_trap==x
 N spr_addr[3:0]==xxxx
 N spr_addr[7:4]==xxxx
 N spr_addr[11:8]==xxxx
@@ -16537,7 +16537,7 @@ N spr_dat_tt[19:16]==xxxx
 N spr_dat_tt[23:20]==xxxx
 N spr_dat_tt[27:24]==xxxx
 N spr_dat_tt[31:28]==xxxx
-B spr_we==x
+Z spr_we==x
 N sprs_dataout[3:0]==0000
 N sprs_dataout[7:4]==0000
 N sprs_dataout[11:8]==0000
@@ -16552,15 +16552,15 @@ NFsr[7:4]==xxxx
 NFsr[11:8]==xxxx
 NFsr[15:12]==xxxx
 NFsr[16:16]==x
-B sr_we==x
-B supv==x
+Z sr_we==x
+Z supv==x
 NFto_sr[3:0]==xxxx
 NFto_sr[7:4]==xxxx
 NFto_sr[11:8]==xxxx
 NFto_sr[15:12]==xxxx
 NFto_sr[16:16]==x
 N wait_on[1:0]==xx
-B wb_flushpipe==x
+Z wb_flushpipe==x
 N wb_forw[3:0]==xxxx
 N wb_forw[7:4]==xxxx
 N wb_forw[11:8]==xxxx
@@ -16569,7 +16569,7 @@ N wb_forw[19:16]==xxxx
 N wb_forw[23:20]==xxxx
 N wb_forw[27:24]==xxxx
 N wb_forw[31:28]==xxxx
-B wb_freeze==x
+Z wb_freeze==x
 NFwb_insn[3:0]==xxxx
 NFwb_insn[7:4]==xxxx
 NFwb_insn[11:8]==xxxx
@@ -16586,7 +16586,7 @@ N wb_pc[19:16]==xxxx
 N wb_pc[23:20]==xxxx
 N wb_pc[27:24]==xxxx
 N wb_pc[31:28]==xxxx
-B wbforw_valid==x
+Z wbforw_valid==x
 TFalu_dataout==dcpu_adr_o
 TFalu_dataout==dcpu_dat_i
 TFalu_dataout==dcpu_dat_o
