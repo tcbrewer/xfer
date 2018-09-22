@@ -1,0 +1,86 @@
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & sf_op[5:0]==xsync_op[5:0] & 2244 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & spr_sr[15:0]==spr_sr_o[15:0] & 2244 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & ctrl_epcr_o[31:0]==pc_execute_to_ctrl[31:0] & 130 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & dbus_dat_i[31:0]==dbus_dat_o[31:0] & 346 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & decode_rfd_adr_o[4:0]==execute_rfd_adr_i[4:0] & 116 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & rf_wrdat[31:0]==spr_bus_dat_o[31:0] & 130 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & rf_wrdat[31:0]==spr_gpr_dat_o[31:0] & 116 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & spr_bus_dat_o[31:0]==spr_gpr_dat_o[31:0] & 116 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & spr_esr[15:0]==spr_sr[15:0] & 116 \\
+\hline
+insns[31:0]==000000000000000000xxxxxxxxxxxxxx & spr_esr[15:0]==spr_sr_o[15:0] & 116 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==dbus_dat_i[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==dbus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==pc_decode_to_execute[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==pc_fetch_to_decode[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==rf_wrdat[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==spr_bus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & ctrl_epcr_o[31:0]==spr_gpr_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_i[31:0]==pc_decode_to_execute[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_i[31:0]==pc_execute_to_ctrl[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_i[31:0]==pc_fetch_to_decode[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_i[31:0]==rf_wrdat[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_i[31:0]==spr_bus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_i[31:0]==spr_gpr_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_o[31:0]==pc_decode_to_execute[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_o[31:0]==pc_execute_to_ctrl[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_o[31:0]==pc_fetch_to_decode[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_o[31:0]==rf_wrdat[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_o[31:0]==spr_bus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & dbus_dat_o[31:0]==spr_gpr_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & opcode[5:0]==sf_op[5:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & opcode[5:0]==xsync_op[5:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_decode_to_execute[31:0]==pc_execute_to_ctrl[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_decode_to_execute[31:0]==pc_fetch_to_decode[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_decode_to_execute[31:0]==spr_bus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_decode_to_execute[31:0]==spr_gpr_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_execute_to_ctrl[31:0]==pc_fetch_to_decode[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_execute_to_ctrl[31:0]==spr_bus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_execute_to_ctrl[31:0]==spr_gpr_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_fetch_to_decode[31:0]==spr_bus_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & pc_fetch_to_decode[31:0]==spr_gpr_dat_o[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & rf_wrdat[31:0]==pc_decode_to_execute[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & rf_wrdat[31:0]==pc_execute_to_ctrl[31:0] & 22 \\
+\hline
+insns[31:0]==________________0010xxxx________ & rf_wrdat[31:0]==pc_fetch_to_decode[31:0] & 22 \\
+\hline
