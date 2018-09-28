@@ -1,0 +1,29 @@
+4866{'du_dat_i[31:0]', 'dbus_adr_o[31:0]', 'dbus_dat_o[31:0]', 'pc_execute_to_ctrl[31:0]', 'ctrl_lsu_adr_o[31:0]', 'dbus_dat_i[31:0]', 'pc_fetch_to_decode[31:0]', 'ctrl_epcr_o[31:0]', 'snoop_adr_i[31:0]', 'fetch_rfa_adr_o[4:0]', 'ibus_dat_i[31:0]', 'mfspr_dat_o[31:0]', 'decode_rfd_adr_o[4:0]', 'spr_bus_dat_o[31:0]', 'spr_bus_dat_i[31:0]', 'du_dat_o[31:0]', 'ibus_adr_o[31:0]', 'pc_decode_to_execute[31:0]'}
+4870{'mfspr_dat_o[31:0]', 'ctrl_lsu_adr_o[31:0]', 'du_dat_o[31:0]', 'dbus_dat_o[31:0]'}
+4874{'decode_rfb_adr_o[4:0]', 'wb_rfd_adr_o[4:0]', 'fetch_rfa_adr_o[4:0]', 'decode_rfd_adr_o[4:0]', 'ctrl_rfd_adr_o[4:0]', 'fetch_rfb_adr_o[4:0]'}
+5130{'mfspr_dat_o[31:0]', 'du_dat_i[31:0]', 'snoop_adr_i[31:0]', 'du_dat_o[31:0]'}
+4878{'ctrl_epcr_o[31:0]', 'pc_execute_to_ctrl[31:0]', 'pc_decode_to_execute[31:0]'}
+4990{'decode_rfa_adr_o[4:0]', 'execute_rfd_adr_o[4:0]'}
+4884{'fetch_rfb_adr_o[4:0]', 'execute_rfd_adr_o[4:0]'}
+5014{'decode_rfa_adr_o[4:0]', 'fetch_rfb_adr_o[4:0]', 'decode_rfb_adr_o[4:0]', 'fetch_rfa_adr_o[4:0]'}
+4888{'spr_bus_dat_o[31:0]', 'wb_rfd_adr_o[4:0]', 'mfspr_dat_o[31:0]', 'decode_rfd_adr_o[4:0]', 'ctrl_rfd_adr_o[4:0]', 'spr_bus_dat_i[31:0]', 'du_dat_o[31:0]'}
+6560{'du_dat_i[31:0]', 'spr_sr_o[15:0]', 'dbus_dat_i[31:0]', 'snoop_adr_i[31:0]', 'ibus_dat_i[31:0]', 'spr_sr[15:0]', 'spr_bus_dat_o[31:0]', 'spr_bus_dat_i[31:0]'}
+4896{'ctrl_rfd_adr_o[4:0]', 'decode_rfa_adr_o[4:0]', 'wb_rfd_adr_o[4:0]'}
+5164{'du_dat_i[31:0]', 'dbus_adr_o[31:0]', 'snoop_adr_i[31:0]', 'spr_bus_dat_o[31:0]', 'spr_bus_dat_i[31:0]'}
+5040{'decode_rfd_adr_o[4:0]', 'execute_rfd_adr_o[4:0]'}
+4918{'ctrl_rfd_adr_o[4:0]', 'wb_rfd_adr_o[4:0]', 'decode_rfb_adr_o[4:0]'}
+5174{'ctrl_rfd_adr_o[4:0]', 'wb_rfd_adr_o[4:0]', 'execute_rfd_adr_o[4:0]'}
+4930{'decode_rfb_adr_o[4:0]', 'execute_rfd_adr_o[4:0]'}
+5188{'fetch_rfb_adr_o[4:0]', 'decode_rfb_adr_o[4:0]'}
+4942{'fetch_rfa_adr_o[4:0]', 'execute_rfd_adr_o[4:0]'}
+5074{'mfspr_dat_o[31:0]', 'dbus_adr_o[31:0]', 'du_dat_o[31:0]'}
+6100{'ctrl_epcr_o[31:0]', 'pc_execute_to_ctrl[31:0]'}
+5082{'spr_bus_dat_o[31:0]', 'ctrl_lsu_adr_o[31:0]', 'spr_bus_dat_i[31:0]', 'dbus_dat_o[31:0]'}
+5338{'spr_esr[15:0]', 'spr_sr[15:0]', 'spr_sr_o[15:0]'}
+4956{'decode_rfd_adr_o[4:0]', 'decode_rfa_adr_o[4:0]'}
+5996{'ctrl_lsu_adr_o[31:0]', 'dbus_dat_o[31:0]'}
+6380{'du_dat_i[31:0]', 'dbus_adr_o[31:0]', 'snoop_adr_i[31:0]'}
+5246{'mfspr_dat_o[31:0]', 'decode_rfa_adr_o[4:0]', 'fetch_rfa_adr_o[4:0]', 'du_dat_o[31:0]'}
+755530
+135378
+26

@@ -1,0 +1,25 @@
+10114{'eear', 'dcpu_dat_o', 'epcr', 'spr_dat_cpu', 'operand_b'}
+11268{'sr', 'esr'}
+9860{'eear', 'dcpu_dat_o', 'id_pc', 'dcpu_adr_o', 'rf_dataw', 'spr_dat_npc', 'epcr', 'operand_b', 'spr_dat_cpu', 'operand_a', 'dcpu_dat_i'}
+13072{'sr', 'to_sr'}
+10136{'eear', 'epcr', 'rf_dataw'}
+10266{'operand_a', 'operand_b', 'spr_dat_cpu'}
+10360{'rf_dataw', 'dcpu_dat_o'}
+13472{'eear', 'operand_b', 'epcr', 'spr_dat_cpu'}
+9888{'eear', 'epcr', 'dcpu_adr_o'}
+9890{'id_pc', 'dcpu_adr_o', 'rf_dataw', 'operand_b', 'spr_dat_cpu', 'operand_a'}
+10792{'rf_dataw', 'dcpu_adr_o'}
+9908{'id_pc', 'spr_dat_npc'}
+10174{'dcpu_dat_o', 'dcpu_adr_o'}
+10816{'rf_dataw', 'operand_b', 'spr_dat_cpu'}
+10182{'dcpu_dat_o', 'operand_a'}
+9934{'operand_a', 'spr_dat_npc'}
+10576{'operand_a', 'dcpu_adr_o'}
+10462{'rf_dataw', 'operand_a'}
+11232{'esr', 'to_sr'}
+10336{'eear', 'operand_a', 'epcr'}
+10870{'dcpu_dat_o', 'operand_b', 'spr_dat_cpu'}
+10488{'operand_b', 'dcpu_adr_o', 'spr_dat_cpu'}
+597838
+234096
+22
