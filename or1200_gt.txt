@@ -1,2 +1,0 @@
-G"TFeear==epcr"
-G"TFoperand_b==spr_dat_cpu"
