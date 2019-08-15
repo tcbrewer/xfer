@@ -15,8 +15,6 @@ def add_to_cache(save_name, cache, line):
 	#print(cache)
 	#print(line)
 	added = False
-	if "condition" not in save_name:
-		return cache
 	if ("0x" in save_name and ("ARG" in line or "ADDR" in line)) or "ADDR == -1" in line: # catch some errors introduced by the frontend
 		return cache
 	if "*" in line:
@@ -25,13 +23,13 @@ def add_to_cache(save_name, cache, line):
 		for var in vars:
 			line.replace(var,"orig(" + var + ")")
 	for cond in cache:
-		if save_name.replace("EXIT","ENTER") in cond[0]:
+		if save_name.replace("EXIT","ENTER") in cond[0].replace("EXIT","ENTER"):
 			to_add = cond
 	if " == " in line and line[0].isalpha(): # create sets of equal values
 		#print(line)
 		regs = set(line.rstrip().split(" == "))
 		for eqs in to_add[1][0]:
-			#print(eqs)s
+			#print(eqs)
 			for reg in regs:
 				if reg in eqs:
 					for reg in regs:
@@ -241,7 +239,7 @@ def print_globals(struct,outf):
 	# three groups:
 	pre = ["~","","not"]
 	[condition, extracted] = struct
-	for i in range(3):
+	for i in range(1,3):
 		group = extracted[i]
 		outf.write("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nGLOBAL:  " + pre[i] + condition + "\n~~ begin equality sets ~~\n")
 		#print(group[0])
@@ -406,7 +404,7 @@ def print_cache(cache, outf):
 			outf.write(entry[2])
 			cnt = cnt + entry[2].count("\n")
 			outf.write("~~ end raw properties ~~\n")
-	print(cnt)
+	#print(cnt)
 	#print("\n\n\n")
 	return cache
 	#print_globals(extract_globals(cache, "(CPL==0)"),outf)
@@ -417,15 +415,15 @@ def cull_globals(cache,struct):
 	for entry in cache:
 		# find appropriate globals to compare to
 		if notcond in entry[0]: # contains relevant condition
-			globals = globals_list[2]
+			globs = globals_list[2]
 		elif condition in entry[0]:
-			globals = globals_list[1]
+			globs = globals_list[1]
 		else:
-			globals = globals_list[0]
+			globs = globals_list[0]
 		#eqs
 		eqs_remove = []
 		for eq in entry[1][0]:
-			for g_eq in globals[0]:
+			for g_eq in globs[0]:
 				if eq.issubset(g_eq):
 					eqs_remove.append(eq)
 		for eq in eqs_remove:
@@ -433,7 +431,7 @@ def cull_globals(cache,struct):
 		#equivs - barely changed
 		eqs_remove = []
 		for eq in entry[1][1]:
-			for g_eq in globals[1]:
+			for g_eq in globs[1]:
 				if eq.issubset(g_eq):
 					eqs_remove.append(eq)
 		for eq in eqs_remove:
@@ -442,7 +440,7 @@ def cull_globals(cache,struct):
 		ineqs_to_remove = []
 		for ineq in entry[1][2]:
 			opers_to_remove = []
-			for g_ineq in globals[2]:
+			for g_ineq in globs[2]:
 				if ineq[0] in g_ineq[0]:
 					for oper in ineq[1]:
 						vals_to_remove = set()
@@ -469,7 +467,7 @@ def cull_globals(cache,struct):
 		imp_remove = []
 		for imp in entry[1][3]:
 			p_remove = []
-			for g_imp in globals[3]:
+			for g_imp in globs[3]:
 				if imp[0] in g_imp[0]:
 					for p in imp[1]:
 						if p in g_imp[1]:
@@ -481,7 +479,8 @@ def cull_globals(cache,struct):
 		for imp in imp_remove:
 			entry[1][3].remove(imp) 
 	return cache
-			
+
+		
 def splice(name,pre):
 	in_file = open(name + ".out", "r")
 	check_next = False
@@ -492,19 +491,20 @@ def splice(name,pre):
 	cache = [] # should be of form [<ENTER line>,[<list of sets of equal regs>, <list of sets of equivalent properties>, <inequality struct>, <implication struct>],<raw string>]]
 	for line in in_file:
 		if "Exiting Dai" in line:
-			outf = open(name + "_moded.out", "w")
-			cache = expand_ineq(cache)
-			#print(cache)
-			if len(cache) == 1:  # this will need to become more expansive
-				print("NON-MODAL PRECONDITION:  " + pre)
-				return
-			else:
-				print("~EU-MODAL PRECONDITION:  " + pre)
-			globals = extract_globals(cache, "(" + pre + ")")
-			print_globals(globals,outf)
-			to_print = cull_globals(cache, globals)
-			print_cache(to_print, outf)
-			return
+			#outf = open(name + "_" + pre + "_moded.out", "w")
+			cache = expand_ineq(cache[1:])
+			globs = extract_globals(cache, "(" + pre + ")")
+			#if len(globs) == 1:
+			#	print("NON-MODAL PRECONDITION:  " + pre)
+			#	return
+			#if globs[1][1] == [[],[],[],[]] or globs[2][1] == [[],[],[],[]]:  # this will need to become more expansive
+			#	print("NON-MODAL PRECONDITION:  " + pre)
+			#	return
+			#print("~EU-MODAL PRECONDITION:  " + pre)
+			#print_globals(globs,outf)
+			to_print = cull_globals(cache, globs)
+			#print_cache(to_print, outf)
+			return [globs,to_print]
 		elif "====" in line:
 			check_next = True
 			if do_transfer:
@@ -512,10 +512,10 @@ def splice(name,pre):
 			do_transfer = False
 			do_save = False
 		elif check_next:
-			do_save = True
 			save_name = line.rstrip()
-			cache.append([save_name,[[],[],[],[]],""]) 
-			#print(cache)
+			if "condition" in save_name:
+				cache.append([save_name,[[],[],[],[]],""]) 
+				do_save = True
 			check_next = False
 		elif do_save:
 			#print(cache)
@@ -558,16 +558,18 @@ def do_splice(dtraces,declss,spinfos,pre):
 
 def do_splices():
 	is_ones = True
-	names = ["cs2"] # ["cs", "cs2", "deb", "fl1", "fl2", "odin", "sol"] # no boot
+	names = ["cs2"] # ["cs", "cs2", "deb", "fl1", "fl2", "odin", "sol"] # no boot, reducing dev time
 	# finding manually for now
 	elfs = [1,2,4,6,8,9,11,13]
 	cr0s = [0,1,2,3,5,7,18,20]
 	cr4s = [6,8,9,11,12]
-	pres = []
+	regs = []
 	for [s,inds] in [["ELF",elfs],["CR0",cr0s],["CR4",cr4s]]:
 		for ind in inds:
-			pres.append("0==" + s + "_" + str(ind))
-			pres.append("orig(" + s + "_" + str(ind) + ")==" + s + "_" + str(ind))
+			regs.append(s + "_" + str(ind))
+			#pres.append("orig(" + s + "_" + str(ind) + ")==" + s + "_" + str(ind))
+	regs = ["EFL_1"] # to reduce dev time
+	pres = []
 	#print(pres)
 	#exit()
 	is_ones = True
@@ -577,9 +579,9 @@ def do_splices():
 	spinfos = []
 	if is_ones:
 		dtraces = [n + "_one.dtrace" for n in names]
-		for n in names:
-			in_one.parse(n)
-		uniq_insts.one_parse(name)
+		#for n in names:
+		#	in_one.parse(n)		- commenting to reduce dev time
+		#uniq_insts.one_parse(name)
 		declss.append(name + "_one.decls")
 		spinfos.append(name + "_one.spinfo")
 	else:
@@ -596,11 +598,25 @@ def do_splices():
 	for spinfo in spinfos:
 		cmd = cmd + " " + spinfo
 	cmd = cmd + " >" + name + ".out"
-	for pre in pres:
-		one_split(pre,name) # batch out spinfos for performance
+	for reg in regs:
+		pres = ["0==" + s + "_" + str(ind)]
+		one_split(pres,name) # batch out spinfos for performance
+		print("REG == " + reg + ":  Entering Daikon for rules")
 		system(cmd)
-		splice(name,pre)
-		
+		print("REG == " + reg + ":  Splicing for rules")
+		[rg, rp] = splice(name,pres[0])
+		pres =["orig(" + s + "_" + str(ind) + ")==" + s + "_" + str(ind)]
+		one_split(pres,name) # batch out spinfos for performance
+		print("REG == " + reg + ":  Entering Daikon for bounds")
+		system(cmd)
+		print("REG == " + reg + ":  Spicing for bounds")
+		[bg, bp] = splice(name,pres[0])
+		#splice returns [globs, to_print]
+		outf = open(name + "_" + reg + "_moded.out", "w")
+		print_globals(rg,outf)
+		print_globals(bg,outf)
+		print_cache(rp, outf)
+		print_cache(bp, outf)
 
 #splice("1sp")
 #splice("cs3")

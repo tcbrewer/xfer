@@ -1,0 +1,11 @@
+REG == EFL_1:  Entering Daikon for rules
+REG == EFL_1:  Splicing for rules
+REG == EFL_1:  Entering Daikon for bounds
+REG == EFL_1:  Spicing for bounds
+0
+0
+
+real	13m52.109s
+user	13m40.926s
+sys	0m0.511s
+

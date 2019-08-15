@@ -1,0 +1,40 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  (0==CR4_12)
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  not(0==CR4_12)
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  (orig(CR4_12)==CR4_12)
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  not(orig(CR4_12)==CR4_12)
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
