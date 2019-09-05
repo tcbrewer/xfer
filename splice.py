@@ -9,6 +9,7 @@ def add_to_cache(save_name, cache, line):
 	#[[9,17,"VM"],[9,21,"CPUIDXE"],[33,0,"PE"],[36,2,"TSD"],[36,11,"UMIP"],[36,13,"VMXE"],[36,20,"SMEP"],[36,21,"SMAP"],[46,8,"LME"],[46,10,"LMA"]]
 	#print(cache)
 	#print(line)
+	#print(save_name)
 	added = False
 	if ("0x" in save_name and ("ARG" in line or "ADDR" in line)) or "ADDR == -1" in line: # catch some errors introduced by the frontend
 		return cache
@@ -18,7 +19,8 @@ def add_to_cache(save_name, cache, line):
 		for var in vars:
 			line.replace(var,"orig(" + var + ")")
 	for cond in cache:
-		if save_name.replace("EXIT","ENTER") in cond[0]:
+
+		if save_name.replace("EXIT","ENTER") in cond[0].replace("EXIT","ENTER"):
 			to_add = cond
 	if " == " in line and line[0].isalpha(): # create sets of equal values
 		#print(line)
@@ -261,11 +263,16 @@ def extract_globals(cache_orig, condition):
 	# (1) condition neutral (2) condition (3) not condition
 	groups = [[],[],[]]
 	for entry in cache:
-		if "not" + condition in entry[0]: # contains relevant condition
+		print(entry[0])
+		print(condition)
+		if "not(" + condition in entry[0]: # contains relevant condition
+			print("not")
 			groups[2].append(entry[1])
 		elif condition in entry[0]:
+			print("cond")
 			groups[1].append(entry[1])
 		else:
+			print("base")
 			groups[0].append(entry[1])
 	out = []
 	for group in groups:
@@ -473,7 +480,7 @@ def cull_globals(cache,struct):
 				imp_remove.append(imp)
 		for imp in imp_remove:
 			entry[1][3].remove(imp) 
-	return cache
+	return globals
 			
 def splice(name):
 	in_file = open(name + ".out", "r")
@@ -486,11 +493,15 @@ def splice(name):
 	for line in in_file:
 		if "Exiting Dai" in line:
 			outf = open(name + "_spliced.out", "w")
-			cache = expand_ineq(cache)
-			globals = extract_globals(cache, "(0==EFL_1)")
+			#print(cache)
+			#cache = expand_ineq(cache)
+			#print(cache)
+			globals = extract_globals(cache, "SMM==1")
+			print(globals[0])
 			print_globals(globals,outf)
-			to_print = cull_globals(cache, globals)
-			print_cache(to_print, outf)
+			#to_print = cull_globals(cache, globals)
+			#exit()
+			#print_cache(to_print, outf)
 			return
 		elif "====" in line:
 			check_next = True
@@ -508,6 +519,6 @@ def splice(name):
 			#print(cache)
 			add_to_cache(save_name, cache, line)
 
-#splice("1sp")
+splice("smm_manual_split")
 #splice("cs3")
 #splice("one_css")

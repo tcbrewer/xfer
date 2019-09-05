@@ -226,7 +226,7 @@ def parse(name):
 			nonce = printer(for_next,vars,uniq,outf,nonce)
 			for_next = vars[0][1]
 		elif line[0:3] in ["ES ", "CS ", "SS ", "DS ", "FS ", "GS ", "LDT", "TR ", "GDT", "IDT"]:  # single register case
-			save(line[0:3].replace(" ",""),line[4:].split("DPL")[0].replace(" ","").replace("\n",""),vars)
+			save(line[0:3].replace(" ",""),line[4:].split("DPL")[0].replace(" ","").replace("\n","").replace("\r",""),vars)
 			if "DPL" in line:
 				#print(line)
 				#print(line[4:].split("DPL=")[1][0:1])
@@ -250,3 +250,4 @@ def parse(name):
 #parse("fl2") 
 #parse("odin") 
 #parse("sol")
+#parse("sel4")

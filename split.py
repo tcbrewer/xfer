@@ -22,7 +22,19 @@
 
 a = ""
 
-def parse(s, names, name):
+def gen_s():
+	s = ""
+	elfs = [1]#[1,2,4,6,8,9,11,13]
+	cr0s = []#[0,1,2,3,5,7,18,20]
+	cr4s = []#[6,8,9,11,12]
+	#regs = ["SMM", "CPL"] - get these back in
+	for [reg,inds] in [["EFL",elfs],["CR0",cr0s],["CR4",cr4s]]:
+		for ind in inds:
+			s = s + reg + "_" + str(ind) + "==0\nD_" + reg + "_" + str(ind) + "==0\n"
+	return s
+
+def parse(names, n):
+	s = gen_s();
 	uniq_insts = set()
 	for name in names:
 		for line in open(name + ".txt", "r"):
@@ -40,7 +52,7 @@ def parse(s, names, name):
 			uniq_insts.remove(spec)
 			uniq_insts.add(spec + "_near")
 			uniq_insts.add(spec + "_far")
-	out = open(name + ".spinfo", "w")
+	out = open(n + ".spinfo", "w")
 	#out.write("input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n") # header
 	#exit()
 	for i in list(uniq_insts):
@@ -48,5 +60,6 @@ def parse(s, names, name):
 		out.write("\n\nPPT_NAME .."+ i + '\n' + s)
 		
 	return
-			
-#parse("EFL[1]==0\nEFL[2]==0\nEFL[4]==0\nEFL[6]==0\n", ["cs", "cs2", "boot", "deb", "fl1", "fl2", "odin", "sol"], "in_trace")
+		
+	
+#parse(["cs", "cs2", "boot", "deb", "fl1", "fl2", "odin", "sol", "sel4"], "in_trace")

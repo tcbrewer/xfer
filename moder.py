@@ -266,7 +266,7 @@ def extract_globals(cache_orig, condition):
 	# (1) condition neutral (2) condition (3) not condition
 	groups = [[],[],[]]
 	for entry in cache:
-		if "not" + condition in entry[0]: # contains relevant condition
+		if "not" in entry[0] and condition in entry[0]: # contains relevant condition
 			groups[2].append(entry[1])
 		elif condition in entry[0]:
 			groups[1].append(entry[1])
@@ -482,7 +482,9 @@ def cull_globals(cache,struct):
 
 		
 def splice(name,pre):
-	in_file = open(name + ".out", "r")
+	#print(name)
+	#print(pre)
+	in_file = open(name + "_one.out", "r") # for ones
 	check_next = False
 	do_transfer = False
 	do_save = False
@@ -492,7 +494,7 @@ def splice(name,pre):
 	for line in in_file:
 		if "Exiting Dai" in line:
 			#outf = open(name + "_" + pre + "_moded.out", "w")
-			cache = expand_ineq(cache[1:])
+			#$cache = expand_ineq(cache[1:])
 			globs = extract_globals(cache, "(" + pre + ")")
 			#if len(globs) == 1:
 			#	print("NON-MODAL PRECONDITION:  " + pre)
@@ -504,6 +506,7 @@ def splice(name,pre):
 			#print_globals(globs,outf)
 			to_print = cull_globals(cache, globs)
 			#print_cache(to_print, outf)
+			print(globs)
 			return [globs,to_print]
 		elif "====" in line:
 			check_next = True
@@ -520,6 +523,9 @@ def splice(name,pre):
 		elif do_save:
 			#print(cache)
 			add_to_cache(save_name, cache, line)
+	globs = extract_globals(cache, "(" + pre + ")")
+	to_print = cull_globals(cache, globs)
+	return [globs,to_print]
 
 def one_split(pres,name): # ones version of the parser from split.py
 	s = ""
@@ -556,31 +562,35 @@ def do_splice(dtraces,declss,spinfos,pre):
 	system(cmd)
 	splice(name,pres[0])
 
-def do_splices():
+def do_splices_old():
+	#system("export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}")
+	#system("export CLASSPATH=\"/home/mars/radish/daikon-5.7.2/daikon.jar\"")
+	#system("export DAIKONDIR=\"/home/mars/radish/daikon-5.7.2\"")
 	is_ones = True
-	names = ["cs2"] # ["cs", "cs2", "deb", "fl1", "fl2", "odin", "sol"] # no boot, reducing dev time
+	names = ["sel4", "cs2"] # ["cs", "cs2", "deb", "fl1", "fl2", "odin", "sol"] # no boot, reducing dev time
 	# finding manually for now
 	elfs = [1,2,4,6,8,9,11,13]
 	cr0s = [0,1,2,3,5,7,18,20]
 	cr4s = [6,8,9,11,12]
-	regs = []
-	for [s,inds] in [["ELF",elfs],["CR0",cr0s],["CR4",cr4s]]:
+	regs = ["SMM", "CPL"]
+	for [s,inds] in [["ELF",elfs],["CR0",cr0s],["CR4",cr4s]]:  # does this work?
 		for ind in inds:
 			regs.append(s + "_" + str(ind))
 			#pres.append("orig(" + s + "_" + str(ind) + ")==" + s + "_" + str(ind))
-	regs = ["EFL_1"] # to reduce dev time
+	#regs = [] # to reduce dev time	
+	regs = ["SMM", "CPL"]
 	pres = []
 	#print(pres)
 	#exit()
 	is_ones = True
 	name = "exp"
-	dtraces = [] # usually will be generated from names but testing for now with reduced set
+	dtraces = ["sel4","cs2"] # usually will be generated from names but testing for now with reduced set
 	declss = []
 	spinfos = []
 	if is_ones:
 		dtraces = [n + "_one.dtrace" for n in names]
 		#for n in names:
-		#	in_one.parse(n)		- commenting to reduce dev time
+		#	in_one.parse(n)		#- commenting to reduce dev time
 		#uniq_insts.one_parse(name)
 		declss.append(name + "_one.decls")
 		spinfos.append(name + "_one.spinfo")
@@ -599,26 +609,35 @@ def do_splices():
 		cmd = cmd + " " + spinfo
 	cmd = cmd + " >" + name + ".out"
 	for reg in regs:
-		pres = ["0==" + s + "_" + str(ind)]
+		pres = ["0==" + reg]
 		one_split(pres,name) # batch out spinfos for performance
 		print("REG == " + reg + ":  Entering Daikon for rules")
 		system(cmd)
 		print("REG == " + reg + ":  Splicing for rules")
-		[rg, rp] = splice(name,pres[0])
-		pres =["orig(" + s + "_" + str(ind) + ")==" + s + "_" + str(ind)]
+		r = splice(name,pres[0])
+		print(r)
+		pres = ["orig(" + reg + ")==" + reg]
 		one_split(pres,name) # batch out spinfos for performance
 		print("REG == " + reg + ":  Entering Daikon for bounds")
 		system(cmd)
-		print("REG == " + reg + ":  Spicing for bounds")
-		[bg, bp] = splice(name,pres[0])
+		print("REG == " + reg + ":  Splicing for bounds")
+		b = splice(name,pres[0])
 		#splice returns [globs, to_print]
 		outf = open(name + "_" + reg + "_moded.out", "w")
-		print_globals(rg,outf)
-		print_globals(bg,outf)
-		print_cache(rp, outf)
-		print_cache(bp, outf)
+		print_globals(r[0],outf)
+		print_globals(b[0],outf)
+		print_cache(r[1], outf)
+		print_cache(b[1], outf)
+
+def do_splices():
+	names = ["cs","fl1","deb","fl2","sel4","cs2","odin","sol"] # no boot, reducing dev time
+	cmd = "java -Xmx1g daikon.Daikon "
+	for name in names:
+		print(name)
+		system(cmd + name + ".dtrace in_trace.decls in_trace.spinfo>" + name + "_delta_cpl.out")
 
 #splice("1sp")
 #splice("cs3")
+#one_split("SMM==1","smm")
 #splice("one_css")
 do_splices()

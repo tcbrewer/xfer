@@ -18,12 +18,27 @@ def gen_s():
 	lens = [22,31,23,16]
 	# hardcode comparability value
 	fill += "5"
-	for i in range(len(names)):
-		for j in range(lens[i]):
-			s += names[i] + "_" + str(j) + "" + fill + fill2
-	for i in range(len(names)):
-		for j in range(lens[i]//2):
-			s += names[i] + "_" + str(j*2) + "_" + str(j*2 + 1) +  "" + fill + fill2
+
+	#for i in range(len(names)):
+	#	for j in range(lens[i]):
+	#		s += names[i] + "_" + str(j) + "" + fill + fill2
+	#for i in range(len(names)):
+	#	for j in range(lens[i]//2):
+	#		s += names[i] + "_" + str(j*2) + "_" + str(j*2 + 1) +  "" + fill + fill2
+	#s = s[:-len(fill2)] + "\n"
+
+	elfs = [1,2,4,6,8,9,11,13]
+	cr0s = [0,1,2,3,5,7,18,20]
+	cr4s = [6,8,9,11,12]
+	regs = ["CPL", "SMM"]
+	for [reg,inds] in [["EFL",elfs],["CR0",cr0s],["CR4",cr4s]]:
+		for ind in inds:
+			s+= reg + "_" + str(ind) + fill + fill2
+	for [reg,inds] in [["EFL",elfs],["CR0",cr0s],["CR4",cr4s]]:
+		for ind in inds:
+			s+= "D_" + reg + "_" + str(ind) + fill + fill2
+	for reg in regs:
+		s+= "D_" + reg + fill + fill2
 	s = s[:-len(fill2)] + "\n"
 	return s
 
@@ -36,6 +51,7 @@ def one_parse(name):
 	return
 
 def local_parse(names,name):
+	n = name
 	uniq_insts = set()
 	s = gen_s()
 	for name in names:
@@ -57,7 +73,7 @@ def local_parse(names,name):
 			uniq_insts.add(spec + "_nocr")
 			uniq_insts.add(spec + "_cr")		
 	add = ""
-	out = open(name + ".decls", "w")
+	out = open(n + ".decls", "w")
 	out.write("input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n") # header
 	for i in list(uniq_insts):
 		out.write("ppt .."+i + "():::ENTER\n  ppt-type enter\n" + s + '\n')
@@ -65,4 +81,6 @@ def local_parse(names,name):
 	return uniq_insts
 	
 def parse():
-	return local_parse(["cs", "cs2", "boot", "deb", "fl1", "fl2", "odin", "sol"],"in_trace")
+	return local_parse(["cs", "cs2", "deb", "boot", "fl1", "fl2", "odin", "sol", "sel4"],"in_trace")
+
+#parse()
