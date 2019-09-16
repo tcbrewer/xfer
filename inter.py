@@ -1,4 +1,4 @@
-# intersect.py
+ # intersect.py
 # finding properties true in all daikon outputs given
 # heavily borrows from legacy splice codes
 
@@ -49,7 +49,7 @@ def intersect():
 		start = False
 		curr_entry = []
 		comp_set = []
-		for line in open(n + "_delta_cpl.out", "r"):
+		for line in open(n + "_delta_smm.out", "r"):
 			if not start:
 				if "===" in line:
 					start = True
