@@ -1,6 +1,6 @@
-// From: https://github.com/KastnerRG/Access_Control_ext/blob/master/RADIX-S/sp_01/prospect.work/aac_explore/assertion_SP01_RECEIVE_M_AXI_BID.work/top_wrapper_TvfnZi.v
+// Andy said look here: https://github.com/KastnerRG/Access_Control_ext/blob/master/RADIX-S/sp_01/prospect.work/aac_explore/assertion_SP01_RECEIVE_M_AXI_BID.work/top_wrapper_TvfnZi.v
 
-// This really looks like the assertions are looking for ARESETN != 0 || REG != 0
+// In terms of values at program points, this really looks like the assertions are looking for ARESETN != 0 || REG != 0. That is easy to find but not exciting and doesn't use IFT.
 
 // PART 1: INITIALIZATION.  This prevents assertion failures during start-up. This is managed using Daikon orig()
 
