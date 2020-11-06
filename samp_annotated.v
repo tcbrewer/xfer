@@ -1,6 +1,8 @@
 // From: https://github.com/KastnerRG/Access_Control_ext/blob/master/RADIX-S/sp_01/prospect.work/aac_explore/assertion_SP01_RECEIVE_M_AXI_BID.work/top_wrapper_TvfnZi.v
 
-// PART 1: INITIALIZATIOn.  This prevents assertion failures during start-up. This is managed using Daikon orig()
+// This really looks like the assertions are looking for ARESETN != 0 || REG != 0
+
+// PART 1: INITIALIZATION.  This prevents assertion failures during start-up. This is managed using Daikon orig()
 
   initial begin
 		assertion_REG_result_result_ready = 1'b0 ;
