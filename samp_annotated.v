@@ -17,7 +17,7 @@
 
 	// ----- Assertion result
   
-// This says:  if <encrpt> REG != 0, else ARESETN != 0 || REG != 0. 
+// This says:  if <encrpt> REG != 1, else ARESETN != 0 || REG != 1. 
 // Note the VCDs I have never use z or x post intialization, REG must be 0 or 1. I suspect this in an init guard as well.
 
 	assign assertion_REG_result_wire = ( ((TTGSHADOWPKG::resolvex_legal === 1'b1) ? ( ( |( REG_wire ) !== 1'b1 && |( REG_wire ) !== 1'bx ) ) :  (( |( REG_wire) !== 1'b1 ) )) || ( (ARESETN) != 0 ) );
