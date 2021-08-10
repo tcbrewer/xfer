@@ -1,0 +1,16 @@
+Programming Review
+Modularity and Efficiency
+Complexity
+Recursion
+Arrays & Lists
+Stacks & Queues
+Trees
+Hashing
+Heaps
+Search/Sort
+Graphs
+Algorithms
+
+Let's do:
+
+HW0-4 with autograders, specs, etc
