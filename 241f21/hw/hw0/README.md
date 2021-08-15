@@ -10,7 +10,6 @@ autograder.py
 Instructions:
 
 For HW0, you will implement two classes, SortableNat and SortableSet.
-
 These classes inherit methods from the Sortable class in sortable.py and apply the methods to the cases of natural numbers or sets, respectively.
 
 1. Study sortable.py to become familiar with the methods common to the Sortable class. You may also wish to read comments in sortableNat.py and sortableSet.py
@@ -23,11 +22,9 @@ These classes inherit methods from the Sortable class in sortable.py and apply t
 
 Learning objectives:
 
-Familiarity with using Python fields (including booleans, integers, and sets).
-
-Familiarity with Python classes (including inheritance and public and private fields and methods).
-
-Familiarity with system for providing feedback.
+* Familiarity with using Python fields (including booleans, integers, and sets).
+* Familiarity with Python classes (including inheritance and public and private fields and methods).
+* Familiarity with system for providing feedback.
 
 Helpful hint:
 
