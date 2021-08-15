@@ -2,10 +2,10 @@ HW0 for CS 241f21
 
 Contents:
 
-sortable.py
-sortableNat.py
-sortableSet.py
-autograder.py
+* sortable.py
+* sortableNat.py
+* sortableSet.py
+* autograder.py
 
 Instructions:
 
