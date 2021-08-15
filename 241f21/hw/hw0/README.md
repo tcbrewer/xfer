@@ -18,7 +18,7 @@ These classes inherit methods from the Sortable class in sortable.py and apply t
 4. Run autograder.py, which will perform some testing over sortable.py, sortableNat.py, and sortableSet.py
 5. Submit your sortableNat.py and sortableSet.py for feedback*
 
-* The process for feedback is not yet determined.
+*The process for feedback is not yet determined.
 
 Learning objectives:
 
