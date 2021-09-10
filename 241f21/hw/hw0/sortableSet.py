@@ -14,6 +14,36 @@
 # Sort them by size, and break ties by comparing them alphabetically when converted to strings using str()
 # So {1,2,3,4} > {1,2,3} (4 comes AFTER 3, so 4 is greater)
 # And {"b"} > {"a"} (b comes AFTER a, so b is greater)
+
+from sortable import Sortable
+
 class SortableSet(Sortable):
 	   
-	# TODO: Your code here
+	def __repr__(self):
+		return 'Sortable(' + str(self.__data) + ')'
+	def __str__(self):
+		return 'Sortable(' + str(self.__data) + ')'
+	
+
+	def __init__(self):
+		self.__data = set()
+		
+
+	def __isAppropriate(self,arg):
+		if type(arg) != type(set()):
+			return False
+		return True
+		
+
+	def setData(self,arg):
+		if self.__isAppropriate(arg):
+			self.__data = arg
+			return True
+		return False
+		
+	def getData(self):
+		return self.__data
+	
+	def greaterThan(self, arg):
+		return self.__data > arg.getData()
+
